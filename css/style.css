@@ -13,6 +13,13 @@ p {
     margin: 0;
 }
 
+footer {
+    max-width: 1143px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 .logo {
     max-width: 97px;
     padding-top: 49px;
@@ -119,6 +126,10 @@ p {
     margin-left: 91px;
 }
 
+.button-online {
+    margin-left: 91px;
+}
+
 button {
     border: 0;
     width: 252px;
@@ -131,10 +142,10 @@ button {
     color: #2B3541;
     background-color: #FBF138;
     box-shadow: 0 13px 24px rgba(251, 241, 56, 0.3);
-    margin-left: 91px;
     padding: 0;
 }
 
+footer,
 .wrapper {
     max-width: 1143px;
     margin: 0 auto;
@@ -142,12 +153,12 @@ button {
     padding-right: 10px;
 }
 
-.style-h3 {
+h3 {
     font-size: 40px;
     line-height: 125%;
     color: #2B3541;
-    margin-top: 160px;
-    margin-bottom: 40px;
+    /* margin-top: 160px;
+    margin-bottom: 40px; */
 }
 
 .events {
@@ -373,4 +384,85 @@ button {
     margin: auto;
     display: flex;
     justify-content: flex-start;
+}
+
+.about-company {
+    position: relative;
+    margin-top: 160px;
+}
+
+.h3-company {
+    margin: 0;
+    padding-right: 0;
+}
+
+.about-company-text {
+    font-size: 18px;
+    line-height: 150%;
+    color: #2B3541;
+    margin-top: 19px;
+    top: 69px;
+    width: 483px;
+}
+
+.button-company {
+    top: 142px;
+    padding: 20px 43px;
+    margin-top: 34px;
+}
+
+.trainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.company-block {
+    margin-top: 140px;
+    margin-bottom: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.company-block-size {
+    width: 285px;
+}
+
+.company-heading {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 125%;
+    color: #2B3541;
+}
+
+.company-text {
+    font-size: 18px;
+    line-height: 150%;
+    color: #2B3541;
+    opacity: 0.6;
+    margin-top: 20px;
+}
+
+footer {
+    /* background-color: #E5E5E5; */
+}
+
+.footer-links {
+    display: flex;
+}
+
+.footer-nav {
+    display: flex;
+}
+
+.footer-nav-icons {
+}
+
+.frontendblock {
+    font-size: 14px;
+    line-height: 150%;
+    color: #2B3541;
+    opacity: 0.3;
+    display: flex;
+    justify-content: space-between;
 }
