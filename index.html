@@ -43,7 +43,7 @@
             </svg>
         </div>
         <nav>
-            <ul class="nav">
+            <ul class="nav nav-width">
                 <li class="nav-item"><a class="nav-link" href="#">Мероприятия</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Расписание</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">О компании</a></li>
@@ -131,7 +131,10 @@
                         <p class="events-date">29.06 - 4.07</p>
                         <p class="events-p">Марафон выносливости</p>
                     </div>
+                    <!-- <div class="events-box"> -->
                     <p class="events-type">марафон</p>
+                    <!-- </div> -->
+                    <button class="participate">Учавствовать</button>
                 </div>
                 <div class="events-about">
                     <img class="events-photo" src="files/@1x/Vebinar 1.png" alt="Photo">
@@ -140,6 +143,7 @@
                         <p class="events-p">Как стать тренером?</p>
                     </div>
                     <p class="events-type">вебинар</p>
+                    <button class="participate">Учавствовать</button>
                 </div>
                 <div class="events-about">
                     <img class="events-photo" src="files/@1x/Vebinar 2.png" alt="Photo">
@@ -147,13 +151,12 @@
                         <p class="events-date">16.07</p>
                         <p class="events-p">Йога, как стиль жизни</p>
                     </div>
-                    <div class="events-type">
-                        <p class="events-type-p">вебинар</p>
-                    </div>
+                    <p class="events-type">вебинар</p>
+                    <button class="participate">Учавствовать</button>
                 </div>
             </div>
             <div class="timetable">
-                <h3 class="style-h3 h3-grid">Расписание тренировок</h3>
+                <h3 class="h3-grid">Расписание тренировок</h3>
                 <div class="date-grid">22 - 28 июля</div>
             </div>
             <section class="section-grid">
@@ -326,7 +329,7 @@
                         <rect x="1" y="1" width="16" height="16" stroke="#2B3541" stroke-width="2" />
                     </svg>
                 </div>
-                <div class="per-inf">Согласен с обработкой <a class="mailing-link" href="#">персональных данных</a>
+                <div class="per-inf">Согласен с обработкой <a class="a-link" href="#">персональных данных</a>
                 </div>
             </div>
         </div>
@@ -341,19 +344,19 @@
             </div>
             <div class="company-block">
                 <div class="company-block-size">
-                    <p class="company-heading">Экономия времени</p>
+                    <h5>Экономия времени</h5>
                     <p class="company-text">Не нужно тратить время на дорогу</p>
                 </div>
                 <div class="company-block-size">
-                    <p class="company-heading">Индивидуальный подход</p>
+                    <h5>Индивидуальный подход</h5>
                     <p class="company-text">Внимание тренера пренадлежит&nbsp;только вам</p>
                 </div>
                 <div class="company-block-size">
-                    <p class="company-heading">Экономия денег</p>
+                    <h5>Экономия денег</h5>
                     <p class="company-text">Средняя цена одной тренировки - 700₽</p>
                 </div>
                 <div class="company-block-size">
-                    <p class="company-heading">Опытный персонал</p>
+                    <h5>Опытный персонал</h5>
                     <p class="company-text">Стаж работы у наших тренеров от 5 лет</p>
                 </div>
             </div>
@@ -398,10 +401,32 @@
                 <li class="footer-nav-item"><a class="footer-nav-link" href="#">О компании</a></li>
             </ul>
         </nav>
-        <div class="footer-email">info@freefit.com</div>
+        <div class="footer-email">
+            <svg class="ellipse" width="73" height="73" viewBox="0 0 73 73" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d_139:964)">
+                    <circle cx="36.5" cy="23.5" r="12.5" fill="#FBF138" />
+                </g>
+                <defs>
+                    <filter id="filter0_d_139:964" x="0" y="0" width="73" height="73" filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                            result="hardAlpha" />
+                        <feOffset dy="13" />
+                        <feGaussianBlur stdDeviation="12" />
+                        <feColorMatrix type="matrix"
+                            values="0 0 0 0 0.984314 0 0 0 0 0.945098 0 0 0 0 0.219608 0 0 0 0.3 0" />
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_139:964" />
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_139:964" result="shape" />
+                    </filter>
+                </defs>
+            </svg>
+            <div class="footer-info">info@freefit.com</div>
+        </div>
         <ul class="footer-nav footer-nav-icons">
-            <li class="footer-nav-icons"><a class="footer-nav-link" href="#">
-                    <svg class="footer-instagram" width="30" height="30" viewBox="0 0 30 30" fill="none"
+            <li class="nav-icons"><a class="footer-nav-link" href="#">
+                    <svg class="instagram" width="30" height="30" viewBox="0 0 30 30" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <g opacity="0.8">
                             <path
@@ -416,8 +441,8 @@
                         </g>
                     </svg>
                 </a></li>
-            <li class="footer-nav-icons"><a class="footer-nav-link" href="#">
-                    <svg class="footer-facebook" width="30" height="30" viewBox="0 0 30 30" fill="none"
+            <li class="nav-icons"><a class="footer-nav-link" href="#">
+                    <svg class="facebook" width="30" height="30" viewBox="0 0 30 30" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <g opacity="0.8">
                             <path
@@ -431,8 +456,8 @@
     <!-- todo доработать классы для футера -->
     <div class="frontendblock">
         <div class="frontendblock-div">© 2020, Все права защищены</div>
-        <div class="frontendblock-div">Сделано в рамках курса учебной платформы <a class="frontendblock-link"
-                href="#">Frontend Blok</a></div>
+        <div class="frontendblock-div">Сделано в рамках курса учебной платформы <a class="a-link" href="#">Frontend
+                Blok</a></div>
     </div>
 </footer>
 
