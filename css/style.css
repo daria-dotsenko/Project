@@ -99,7 +99,7 @@ footer {
     max-width: 676px;
 }
 
-.workout, 
+.workout,
 .online-span {
     font-size: 40px;
     line-height: 125%;
@@ -174,7 +174,7 @@ h3 {
     position: relative;
 }
 
-.events-about:hover .events-type {display: none;} 
+.events-about:hover .events-type {display: none;}
 
 .events-about:hover .participate {display: inline;}
 
@@ -216,9 +216,10 @@ h3 {
     height: 47px;
     background: #FBF138;
     font-size: 18px;
-    line-height: 150%;
-    text-align: center;
     color: #2B3541;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .participate {
@@ -485,7 +486,7 @@ h3 {
 }
 
 .company-block-size {
-    width: 285px;
+    width: 200px;
 }
 
 h5 {
@@ -501,6 +502,13 @@ h5 {
     color: #2B3541;
     opacity: 0.6;
     margin-top: 20px;
+    white-space: pre-wrap;
+    overflow: hidden;
+}
+
+h5 {
+    white-space: pre-wrap;
+    overflow: hidden;
 }
 
 .footer-links,
