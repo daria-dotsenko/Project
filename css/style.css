@@ -16,12 +16,7 @@ p {
 footer {
     background-color: #E5E5E5;
     padding-top: 58px;
-}
-
-.logo {
-    max-width: 97px;
-    padding-top: 49px;
-    padding-left: 53px;
+    /*display: flex;*/
 }
 
 .nav {
@@ -34,8 +29,21 @@ footer {
     display: flex;
 }
 
+.logo {
+    /*position: relative;*/
+    max-width: 97px;
+    margin-top: 49px;
+    margin-left: 53px;
+    padding: 0;
+}
+
+.nav-width {
+    max-width: 1143px;
+    margin: 0 auto;
+}
+
 .nav:first-child {
-    margin-left: -669px;
+    /*margin-left: -669px;*/
 }
 
 .nav:last-child {
@@ -137,6 +145,7 @@ button {
     background-color: #FBF138;
     box-shadow: 0 13px 24px rgba(251, 241, 56, 0.3);
     padding: 0;
+    cursor: pointer;
 }
 
 button:hover {
@@ -174,12 +183,39 @@ h3 {
     position: relative;
 }
 
+/*.events-a.bout:after {*/
+
+/*}*/
+
 .events-about:hover .events-type {display: none;}
 
 .events-about:hover .participate {display: inline;}
 
-.events-photo {
+.events-about:hover .div-image-01 {background-image: linear-gradient(180deg, rgba(251, 241, 56, 0.6) 0%, rgba(253, 249, 182, 0) 100%), url("../files/@1x/maraphon hover.png");}
+
+.events-about:hover .div-image-02 {background-image: linear-gradient(180deg, rgba(251, 241, 56, 0.6) 0%, rgba(253, 249, 182, 0) 100%), url("../files/@1x/Vebinar 1.png");}
+
+.events-about:hover .div-image-03 {background-image: linear-gradient(180deg, rgba(251, 241, 56, 0.6) 0%, rgba(253, 249, 182, 0) 100%), url("../files/@1x/Vebinar 2.png");}
+
+.div-image-01 {
     position: relative;
+    width: 367px;
+    height: 600px;
+    background-image: linear-gradient(180deg, rgba(251, 241, 56, 0.3) 0%, rgba(253, 249, 182, 0) 100%), url("../files/@1x/maraphon.png");
+}
+
+.div-image-02 {
+    position: relative;
+    width: 367px;
+    height: 600px;
+    background-image: linear-gradient(180deg, rgba(251, 241, 56, 0.3) 0%, rgba(253, 249, 182, 0) 100%), url("../files/@1x/Vebinar 1.png");
+}
+
+.div-image-03 {
+    position: relative;
+    width: 367px;
+    height: 600px;
+    background-image: linear-gradient(180deg, rgba(251, 241, 56, 0.3) 0%, rgba(253, 249, 182, 0) 100%), url("../files/@1x/Vebinar 2.png");
 }
 
 .events-absolute {
@@ -404,7 +440,17 @@ h3 {
     top: -30px;
 }
 
+.block-input {
+    position: relative;
+    width: 617px;
+    height: 100px;
+    /*max-width: 1143px;*/
+    margin: 0 auto;
+}
+
 .email {
+    position: absolute;
+    left: 0;
     margin-bottom: 10px;
     width: 334px;
     height: 27px;
@@ -420,18 +466,31 @@ h3 {
 }
 
 .subscribe {
+    position: absolute;
     margin-left: 20px;
     padding: 20px 43px;
+    right: 0;
+    width: 225px;
 }
 
 .check {
+    position: absolute;
+    bottom: 0;
     max-width: 617px;
     margin: auto;
     display: flex;
     justify-content: flex-start;
 }
 
+.check-box-onclick {
+    display: none;
+}
+
+.check:active .check-box-onclick {display: inline}
+/*todo доработать нажатие кнопки*/
+
 .check-box {
+    cursor: pointer;
 }
 
 .per-inf {
@@ -476,6 +535,12 @@ h3 {
     position: absolute;
     top: 0;
     right: 0;
+    width: 581px;
+    height: 336px;
+    background-image: linear-gradient(180deg, rgba(251, 241, 56, 0.3) 0%, rgba(253, 249, 182, 0) 100%), url("../files/@1x/trainer.png");
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .company-block {
@@ -486,7 +551,7 @@ h3 {
 }
 
 .company-block-size {
-    width: 200px;
+    width: 25%px;
 }
 
 h5 {
