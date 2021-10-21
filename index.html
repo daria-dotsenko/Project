@@ -9,13 +9,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-<!--    <link rel="stylesheet" href="css/script/jquery-ui.min.css">-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--    <link rel="stylesheet" href="css/script/jquery-ui.min.css">-->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 <header>
-    <div class="nav logo">
+    <div class="logo">
         <svg width="98" height="30" viewBox="0 0 98 30" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                     d="M66.1888 9.56728C65.7553 5.54333 63.2459 2.14533 59.6187 0.714596C55.9915 -0.71614 51.8623 0.0439387 48.9423 2.61479C47.1857 1.07228 44.9044 0.155715 42.5319 0.0439386C39.7031 -0.0901929 37.034 0.871082 35.0037 2.77128C33.1102 4.53734 31.9468 6.97407 31.7187 9.61199C31.6046 10.9309 31.7415 12.2499 32.1749 13.6583L14.4722 13.6136C13.9931 13.6136 13.6053 13.8371 13.3772 14.2172C13.1262 14.6419 13.1262 15.1784 13.3772 15.6032C13.6053 15.9832 13.9931 16.2068 14.4722 16.2068L34.0456 16.2515C34.5018 16.2515 34.8668 16.0503 35.0949 15.715C35.3459 15.3349 35.3915 14.7984 35.1862 14.3513C33.6577 10.8862 34.2281 7.21997 36.669 4.80561C38.1747 3.33016 40.1594 2.57008 42.2353 2.63715C44.4254 2.70421 46.5242 3.7102 47.9842 5.36449C48.2123 5.61039 48.5545 5.76688 48.9423 5.76688C49.3301 5.76688 49.6723 5.63275 49.9004 5.36449C52.1589 2.81599 55.558 1.92178 58.6149 3.08425C61.3068 4.11259 63.2459 6.68345 63.5653 9.63434C63.6566 10.4838 64.4322 10.9086 65.1394 10.8415C65.8238 10.7521 66.2572 10.2379 66.1888 9.56728Z"
@@ -44,14 +45,14 @@
         </svg>
     </div>
     <nav>
-        <ul class="nav nav-width">
+        <ul class="nav">
             <li class="nav-item"><a class="nav-link" href="#">Мероприятия</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Расписание</a></li>
             <li class="nav-item"><a class="nav-link" href="#">О компании</a></li>
         </ul>
     </nav>
-    <ul class="nav nav-icons">
-        <li class="nav-icons"><a class="nav-link" href="#">
+    <ul class="nav-icons">
+        <li class="icons"><a class="nav-link" href="#">
             <svg class="instagram" width="30" height="30" viewBox="0 0 30 30" fill="none"
                  xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.8">
@@ -67,7 +68,7 @@
                 </g>
             </svg>
         </a></li>
-        <li class="nav-icons"><a class="nav-link" href="#">
+        <li class="icons"><a class="nav-link" href="#">
             <svg class="facebook" width="30" height="30" viewBox="0 0 30 30" fill="none"
                  xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.8">
@@ -123,7 +124,6 @@
         </a></div>
     </div>
     <div class="wrapper">
-        <!--todo центрировать текст в events-type-->
         <h3 class="style-h3">Ближайшие события</h3>
         <div class="events">
             <div class="events-about">
@@ -134,7 +134,7 @@
                         <p class="events-p">Марафон выносливости</p>
                     </div>
                     <p class="events-type">марафон</p>
-                    <button class="participate">Учавствовать</button>
+                    <button class="participate"><a href="#modal1" class="open_modal">Учавствовать</a></button>
                 </div>
             </div>
             <div class="events-about">
@@ -160,6 +160,7 @@
                 </div>
             </div>
         </div>
+
         <div class="timetable">
             <h3 class="h3-grid">Расписание тренировок</h3>
             <div class="date-grid">22 - 28 июля</div>
@@ -301,7 +302,6 @@
     </div>
     <div class="mailing">
         <div class="div-cirlce">
-            <!--todo позиционировать круг в соответствии с шаблоном-->
             <svg class="circle" width="101" height="101" viewBox="0 0 101 101" fill="none"
                  xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_d_139:928)">
@@ -334,7 +334,8 @@
                      xmlns="http://www.w3.org/2000/svg">
                     <rect x="1" y="1" width="16" height="16" stroke="#2B3541" stroke-width="2"/>
                 </svg>
-                <svg class="check-box-onclick" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="check-box-onclick" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
                     <rect width="18" height="18" fill="#2B3541"/>
                     <path d="M1 9.51047L6.4791 15L17 4.48955L15.4896 3L6.4791 11.9999L2.48953 8.01042L1 9.51047Z"
                           fill="white"/>
@@ -374,8 +375,86 @@
     </div>
 </main>
 <!--todo пересмотреть где должен закрываться main-->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="css/script/jquery-ui.min.css"></script>
+<div id="modal1" class="modal_div">
+            <span class="modal_close">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="25.288" height="2.06669"
+                              transform="matrix(0.69782 0.716273 -0.69782 0.716273 2.35352 0.388474)" fill="#010101"/>
+                        <rect width="25.8556" height="2.06669"
+                              transform="matrix(0.69782 -0.716273 0.69782 0.716273 0 18.5197)" fill="#010101"/>
+                </svg>
+            </span>
+    <form>
+        <div class="form-heading">
+            <svg class="form-circle" width="101" height="101" viewBox="0 0 101 101" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d_147:102)">
+                    <circle cx="50.5" cy="37.5" r="26.5" fill="#FBF138"/>
+                </g>
+                <defs>
+                    <filter id="filter0_d_147:102" x="0" y="0" width="101" height="101"
+                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix"
+                                       values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                       result="hardAlpha"/>
+                        <feOffset dy="13"/>
+                        <feGaussianBlur stdDeviation="12"/>
+                        <feColorMatrix type="matrix"
+                                       values="0 0 0 0 0.984314 0 0 0 0 0.945098 0 0 0 0 0.219608 0 0 0 0.3 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix"
+                                 result="effect1_dropShadow_147:102"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_147:102"
+                                 result="shape"/>
+                    </filter>
+                </defs>
+            </svg>
+            <div class="form-text">Заявка на участие «Марафон&nbsp;выносливости»</div>
+        </div>
+        <div class="form-information">Заполните все поля, и мы пришлем информацию&nbsp;в&nbsp;ближайшее
+            время
+        </div>
+        <input class="form-email" type="text" placeholder="Ваш e-mail">
+        <input class="form-phone" type="text" value="Ваш номер телефона">
+        <button class="form-btn">Отправить</button>
+        <!--                todo placeholder или value вставлять в input?-->
+    </form>
+
+</div>
+<div id="overlay"></div>
+
+
+<!--<script src="css/script/jquery-ui.min.css"></script>-->
+<script>
+    $(document).ready(function () {
+        var overlay = $('#overlay');
+        var open_modal = $('.open_modal');
+        var close = $('.modal_close, #overlay');
+        var modal = $('.modal_div');
+
+        open_modal.click(function (event) {
+            event.preventDefault();
+            var div = $(this).attr('href');
+            overlay.fadeIn(400,
+                function () {
+                    $(div)
+                        .css('display', 'block')
+                        .animate({opacity: 1, top: '50%'}, 200);
+                });
+        });
+
+        close.click(function () {
+            modal
+                .animate({opacity: 0, top: '45%'}, 200,
+                    function () {
+                        $(this).css('display', 'none');
+                        overlay.fadeOut(400);
+                    }
+                );
+        });
+    });
+    // console.log($('.about-company-text').text())
+</script>
 </body>
 
 <footer>
@@ -467,7 +546,6 @@
             </a></li>
         </ul>
     </div>
-    <!-- todo доработать классы для футера -->
     <div class="frontendblock">
         <div class="frontendblock-div">© 2020, Все права защищены</div>
         <div class="frontendblock-div">Сделано в рамках курса учебной платформы <a class="a-link" href="#">Frontend
