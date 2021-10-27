@@ -82,7 +82,6 @@
 </header>
 <main>
     <div class="start">
-        <!--todo исправить расположение start и шапки-->
         <img class="online-photo" src="files/@1x/Image 1 screen.png" alt="Photo">
         <div class="in-photo">
             <h1 class="online">Онлайн тренировки любой сложности</h1>
@@ -167,7 +166,7 @@
         </div>
         <section class="section-grid">
             <div class="div-grid">
-                <div class="section section-01">
+                <div class="section section-01 section-gradient">
                     <div class="section-date">
                         <p>22 июня, 10:00</p>
                     </div>
@@ -202,7 +201,7 @@
                     </div>
                     <div class="section-text">Функциональный тренинг</div>
                 </div>
-                <div class="section section-02">
+                <div class="section section-02 section-gradient">
                     <div class="section-date">23 июня, 10:00</div>
                     <div class="section-image-02">
                         <svg width="67" height="107" viewBox="0 0 67 107" fill="none"
@@ -216,7 +215,7 @@
                     <p class="section-description">Упражнения помогут создать красивый
                         рельеф&nbsp;и&nbsp;прийти в&nbsp;спортивную форму.</p>
                 </div>
-                <div class="section section-03">
+                <div class="section section-03 section-gradient">
                     <div class="section-date">24 июня, 10:00</div>
                     <div class="section-image">
                         <svg width="42" height="85" viewBox="0 0 42 85" fill="none"
@@ -240,7 +239,7 @@
                     </div>
                     <div class="section-text">Body sculpt</div>
                 </div>
-                <div class="section section-04">
+                <div class="section section-04 section-gradient">
                     <div class="section-date">25 июня, 11:00</div>
                     <div class="section-image">
                         <svg width="65" height="61" viewBox="0 0 65 61" fill="none"
@@ -252,7 +251,7 @@
                     </div>
                     <div class="section-text">Дыхательные практики</div>
                 </div>
-                <div class="section section-05">
+                <div class="section section-05 section-gradient">
                     <div class="section-date">26 июня, 11:00</div>
                     <div class="section-image">
                         <svg width="91" height="50" viewBox="0 0 91 50" fill="none"
@@ -276,7 +275,7 @@
                     </div>
                     <div class="section-text">L.A.B.</div>
                 </div>
-                <div class="section section-06">
+                <div class="section section-06 section-gradient">
                     <div class="section-date">27 июня, 10:00</div>
                     <div class="section-image">
                         <svg width="58" height="66" viewBox="0 0 58 66" fill="none"
@@ -326,7 +325,7 @@
         </div>
         <div class="block-input">
             <label>
-                <input class="email" type="text" value="Ваш e-mail">
+                <input class="email" type="text" placeholder="Ваш e-mail">
             </label>
             <button class="subscribe"><b>Подписаться</b></button>
             <div class="check">
@@ -415,7 +414,7 @@
             время
         </div>
         <input class="form-email" type="text" placeholder="Ваш e-mail">
-        <input class="form-phone" type="text" value="Ваш номер телефона">
+        <input class="form-phone" type="text" placeholder="Ваш номер телефона">
         <button class="form-btn">Отправить</button>
         <!--                todo placeholder или value вставлять в input?-->
     </form>
@@ -453,6 +452,7 @@
                 );
         });
     });
+    new Date().getDay();  //0=Sun, 1=Mon, ..., 6=Sat
     // console.log($('.about-company-text').text())
 </script>
 </body>
@@ -518,7 +518,7 @@
             <div class="footer-info">info@freefit.com</div>
         </div>
         <ul class="footer-nav footer-nav-icons">
-            <li class="nav-icons"><a class="footer-nav-link" href="#">
+            <li class="icons"><a class="footer-nav-link" href="#">
                 <svg class="instagram" width="30" height="30" viewBox="0 0 30 30" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.8">
@@ -534,7 +534,7 @@
                     </g>
                 </svg>
             </a></li>
-            <li class="nav-icons"><a class="footer-nav-link" href="#">
+            <li class="icons"><a class="footer-nav-link" href="#">
                 <svg class="facebook" width="30" height="30" viewBox="0 0 30 30" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.8">
@@ -547,7 +547,7 @@
         </ul>
     </div>
     <div class="frontendblock">
-        <div class="frontendblock-div">© 2020, Все права защищены</div>
+        <div class="frontendblock-div">&copy; 2020, Все права защищены</div>
         <div class="frontendblock-div">Сделано в рамках курса учебной платформы <a class="a-link" href="#">Frontend
             Blok</a></div>
     </div>
