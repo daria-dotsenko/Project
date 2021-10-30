@@ -92,23 +92,28 @@ nav {
 }
 
 .online-photo {
+    background-image: url("../files/@1x/Image 1 screen.png");
     position: relative;
     width: 100%;
+    /*max-width: 1325px;*/
     height: 852px;
-    margin-left: 25%;
-    margin-right: 10%;
+    margin-left: 17%;
+    margin-right: 0;
+    padding: 0;
+    /*margin-right: 10%;*/
     /*overflow: hidden;*/
-}
-
-.online-photo img {
-    width: 100%;
-    height: 852px;
-    position: absolute;
-    left: -50%;
-    top: -50%;
-    transform: translate(50%, 50%);
     object-fit: cover;
 }
+
+/*.online-photo img {*/
+/*    width: 100%;*/
+/*    !*height: 852px;*!*/
+/*    position: absolute;*/
+/*    left: -50%;*/
+/*    top: -50%;*/
+/*    transform: translate(50%, 50%);*/
+/*    object-fit: cover;*/
+/*}*/
 
 .arrow {
     margin-left: 91px;
@@ -172,7 +177,7 @@ button {
 button:hover {
     color: #FBF138;
     background-color: #2B3541;
-    box-shadow: 0px 13px 24px rgba(70, 86, 106, 0.2);
+    box-shadow: 0 13px 24px rgba(70, 86, 106, 0.2);
 }
 
 .wrapper {
@@ -196,13 +201,13 @@ h3 {
 
 .events {
     display: flex;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     justify-content: space-between;
 }
 
 .events-about {
     display: flex;
-    position: relative;
+    /*position: relative;*/
 }
 
 /*.events-about:after {*/
@@ -224,6 +229,7 @@ h3 {
     width: 367px;
     height: 600px;
     background-image: linear-gradient(180deg, rgba(251, 241, 56, 0.3) 0%, rgba(253, 249, 182, 0) 100%), url("../files/@1x/maraphon.png");
+    background-size: 100%;
 }
 
 .div-image-02 {
@@ -231,6 +237,7 @@ h3 {
     width: 367px;
     height: 600px;
     background-image: linear-gradient(180deg, rgba(251, 241, 56, 0.3) 0%, rgba(253, 249, 182, 0) 100%), url("../files/@1x/Vebinar 1.png");
+    background-size: 100%;
 }
 
 .div-image-03 {
@@ -238,6 +245,7 @@ h3 {
     width: 367px;
     height: 600px;
     background-image: linear-gradient(180deg, rgba(251, 241, 56, 0.3) 0%, rgba(253, 249, 182, 0) 100%), url("../files/@1x/Vebinar 2.png");
+    background-size: 100%;
 }
 
 .events-absolute {
@@ -293,7 +301,7 @@ h3 {
     /*letter-spacing: 0.03em;*/
     /*text-transform: uppercase;*/
     background-color: #2B3541;
-    box-shadow: 0px 13px 24px rgba(70, 86, 106, 0.2);
+    box-shadow: 0 13px 24px rgba(70, 86, 106, 0.2);
 }
 
 .open_modal {
@@ -347,7 +355,7 @@ h3 {
     border: none;
     background-color: #FEFCFE;
     /*opacity: 0.5;*/
-    box-shadow: 0px 4px 30px rgba(43, 53, 65, 0.2);
+    box-shadow: 0 4px 30px rgba(43, 53, 65, 0.2);
 }
 
 .section-01 {
@@ -578,7 +586,7 @@ h3 {
 }
 
 .company-block-size {
-    width: 25%px;
+    width: 25%;
 }
 
 h5 {
@@ -612,7 +620,6 @@ h5 {
     display: flex;
     justify-content: space-between;
     text-align: center;
-    margin: auto;
 }
 
 .footer-logo {
@@ -783,37 +790,59 @@ h5 {
 /*    background: linear-gradient(360deg, rgba(253, 249, 182, 0.45) 0%, rgba(251, 241, 56, 1) 100%);*/
 /*    opacity: 1;*/
 /*    box-shadow: 0px 13px 30px rgba(186, 180, 69, 0.2);*/
-}
+/*}*/
 
 @media (max-width: 1400px) {
-    .start {
-        display: flex;
-    }
-    .online-photo {
-        order: -1;
-    }
+
 
 }
 
 @media (max-width: 1200px) {
-    .events {
-        /*justify-content: center;*/
-        align-content: stretch;
+    h3 {
+        font-size: 28px;
     }
-    .events-about {
-        /*flex-grow: 1;*/
+    nav {
+        width: auto;
     }
-    .div-image-01,
-    .div-image-02,
-    .div-image-03 {
-        /*width: 100%;*/
-        /*max-width: 367px;*/
+    .online-photo {
+        margin-left: 12%;
+    }
+    .online {
+        font-size: 30px;
+    }
+    .workout,
+    .online-span {
+        font-size: 28px;
+    }
+    .online-span {
+        margin-right: 8px;
+    }
+    .online-p,
+    .button-online {
+        font-size: 14px;
+        margin-left: 60px;
+    }
+    .wrapper {
+        max-width: 900px;
+        margin: 0 auto;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .div-grid {
+        margin: 0 auto;
+        grid-template-columns: repeat(3, 450px);
+    }
+    /*.div-cirlce {*/
+    /*    left: 25px;*/
+    /*    top: -35px;*/
+    /*}*/
+    .date-grid {
+        font-size: 24px;
     }
     .section-02 {
         grid-column: 2 / 3;
         grid-row: 1 / 3;
     }
-
     .section-03 {
         grid-column: 1 / 2;
         grid-row: 2 / 5;
@@ -841,11 +870,26 @@ h5 {
 }
 
 @media (max-width: 900px) {
+    .start {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        /*margin: 0;*/
+    }
+    .online-photo {
+        margin: auto;
+    }
+    .in-photo {
+        position: static;
+        margin: 0 auto;
+    }
+    .online {
+        margin-top: 60px;
+
+    }
     .arrow {
         display: none;
         flex-direction: column;
     }
-
 }
 
 @media (max-width: 780px) {
