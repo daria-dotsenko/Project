@@ -16,7 +16,6 @@ p {
 footer {
     background-color: #E5E5E5;
     padding-top: 58px;
-    /*display: flex;*/
 }
 
 nav {
@@ -93,16 +92,17 @@ nav {
 
 .online-photo {
     background-image: url("../files/@1x/Image 1 screen.png");
+    background-size: 100%;
     position: relative;
     width: 100%;
     /*max-width: 1325px;*/
-    height: 852px;
+    height: 814px;
     margin-left: 17%;
     margin-right: 0;
     padding: 0;
     /*margin-right: 10%;*/
     /*overflow: hidden;*/
-    object-fit: cover;
+    /*object-fit: cover;*/
 }
 
 /*.online-photo img {*/
@@ -201,7 +201,7 @@ h3 {
 
 .events {
     display: flex;
-    /*flex-wrap: wrap;*/
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -278,7 +278,7 @@ h3 {
     bottom: 0;
     right: 0;
     margin: 0;
-    width: 126px;
+    width: 122px;
     height: 47px;
     background: #FBF138;
     font-size: 18px;
@@ -286,6 +286,11 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.add,
+.add-01 {
+    display: none;
 }
 
 .participate {
@@ -538,12 +543,9 @@ h3 {
 }
 
 .a-link:hover {
-    color: rgba(43, 53, 65, 1);
-}
-
-.about-company {
-    position: relative;
-    margin-top: 160px;
+    color: black;
+    opacity: 1;
+    cursor: pointer;
 }
 
 .h3-company {
@@ -557,7 +559,8 @@ h3 {
     color: #2B3541;
     margin-top: 19px;
     top: 69px;
-    width: 483px;
+    width: 100%;
+    max-width: 483px;
 }
 
 .button-company {
@@ -567,22 +570,19 @@ h3 {
 }
 
 .trainer {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 581px;
+    width: 100%;
+    max-width: 581px;
     height: 336px;
+    /*object-fit: cover;*/
     background-image: linear-gradient(180deg, rgba(251, 241, 56, 0.3) 0%, rgba(253, 249, 182, 0) 100%), url("../files/@1x/trainer.png");
-    position: absolute;
-    top: 0;
-    right: 0;
+    background-size: 100%;
 }
 
 .company-block {
     margin-top: 140px;
     margin-bottom: 170px;
-    display: flex;
-    justify-content: space-between;
+    /*display: flex;*/
+    /*justify-content: space-between;*/
 }
 
 .company-block-size {
@@ -594,6 +594,7 @@ h5 {
     font-size: 18px;
     line-height: 125%;
     color: #2B3541;
+    margin-top: 80px;
 }
 
 .company-text {
@@ -609,6 +610,64 @@ h5 {
 h5 {
     white-space: pre-wrap;
     overflow: hidden;
+}
+
+.about-company {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    margin-top: 160px;
+    margin-bottom: 170px;
+}
+
+.grid-01 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+.grid-02 {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+}
+.grid-03 {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+}
+.grid-04 {
+    grid-column: 3 / 5;
+    grid-row: 1 / 4;
+}
+.grid-05 {
+     grid-column: 1 / 2;
+     grid-row: 4 / 5;
+ }
+.grid-06 {
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+}
+.grid-07 {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+.grid-08 {
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+}
+.grid-09 {
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+}
+.grid-10 {
+    grid-column: 3 / 4;
+    grid-row: 5 / 6;
+}
+.grid-11 {
+    grid-column: 4 / 5;
+    grid-row: 4 / 5;
+}
+.grid-12 {
+    grid-column: 4 / 5;
+    grid-row: 5 / 6;
 }
 
 .footer-links,
@@ -633,15 +692,21 @@ h5 {
 }
 
 .footer-nav-item {
-    padding: 0 45px;
+    padding: 0 35px;
 }
 
 .footer-nav-link {
     text-decoration: none;
+    color: #2B3541;
 }
 
 .footer-nav-item:first-child {
+    margin-left: 72px;
     padding-left: 0;
+}
+
+.footer-flex {
+    display: flex;
 }
 
 .footer-email {
@@ -657,24 +722,37 @@ h5 {
 .ellipse {
     position: absolute;
     z-index: 1;
-    left: -40px;
+    left: -138px;
     top: -22px;
 }
 
 .footer-info {
     position: absolute;
     z-index: 2;
+    left: -97px;
 }
 
 .footer-nav-icons {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
 }
 
 .frontendblock {
     font-size: 14px;
     line-height: 150%;
+    padding-top: 21px;
+}
+
+.frontendblock-div {
+    padding: 8px 0;
     color: #2B3541;
     opacity: 0.3;
-    padding-top: 21px;
+}
+
+.a-link {
+    color: rgba(43, 53, 65, 1);
 }
 
 .instagram:hover {
@@ -792,57 +870,95 @@ h5 {
 /*    box-shadow: 0px 13px 30px rgba(186, 180, 69, 0.2);*/
 /*}*/
 
-@media (max-width: 1400px) {
-
-
-}
-
 @media (max-width: 1200px) {
+    .about-company-text {
+        font-size: 16px;
+    }
+    .date-grid,
+    .h3-company {
+        font-size: 26px;
+    }
+
+    .workout,
+    .online-span,
     h3 {
         font-size: 28px;
     }
-    nav {
-        width: auto;
-    }
-    .online-photo {
-        margin-left: 12%;
-    }
+
     .online {
         font-size: 30px;
     }
-    .workout,
-    .online-span {
-        font-size: 28px;
+
+    nav {
+        width: auto;
     }
+
+    .online-photo {
+        margin-left: 12%;
+    }
+
     .online-span {
         margin-right: 8px;
     }
+
     .online-p,
     .button-online {
         font-size: 14px;
         margin-left: 60px;
     }
+
     .wrapper {
-        max-width: 900px;
+        max-width: 750px;
         margin: 0 auto;
         padding-left: 10px;
         padding-right: 10px;
     }
+
+    .div-image-01,
+    .div-image-02,
+    .div-image-03 {
+        width: 240px;
+        height: 392px;
+    }
+
+    .events-p {
+        font-size: 20px;
+        padding: 10px 0 0 25px;
+        width: 215px;
+    }
+
+    .events-date {
+        font-size: 16px;
+        padding: 20px 0 0 25px;
+    }
+
+    .events-type {
+        width: 87px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .participate {
+        left: 25px;
+        width: 196px;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .timetable {
+        margin-top: 80px;
+    }
+
     .div-grid {
         margin: 0 auto;
-        grid-template-columns: repeat(3, 450px);
+        grid-template-columns: repeat(2, 370px);
     }
-    /*.div-cirlce {*/
-    /*    left: 25px;*/
-    /*    top: -35px;*/
-    /*}*/
-    .date-grid {
-        font-size: 24px;
-    }
+
     .section-02 {
         grid-column: 2 / 3;
         grid-row: 1 / 3;
     }
+
     .section-03 {
         grid-column: 1 / 2;
         grid-row: 2 / 5;
@@ -857,16 +973,71 @@ h5 {
     .section-05 {
         grid-column: 1 / 2;
         grid-row: 5 / 6;
-        /*grid-column: 1 / 2;*/
-        /*grid-row: 4 / 6;*/
     }
 
     .section-06 {
         grid-column: 2 / 3;
         grid-row: 4 / 6;
-        /*grid-column: 2 / 3;*/
-        /*grid-row: 4 / 6;*/
     }
+
+    h5 {
+        font-size: 16px;
+    }
+    .company-text {
+        font-size: 16px;
+    }
+
+    .company-block {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    button {
+        font-size: 16px;
+        width: 217px;
+        height: 55px;
+    }
+    .button-company,
+    .subscribe {
+        padding: 0;
+    }
+    footer {
+        padding-top: 30px;
+    }
+    .footer-nav {
+        justify-content: space-between;
+        max-width: 550px;
+        margin: auto;
+        padding-top: 30px;
+    }
+    .footer-nav-item:first-child {
+        margin-left: 0;
+    }
+    .footer-nav-item {
+        padding: 0;
+    }
+    .footer-links {
+        max-width: 750px;
+        display: inline;
+    }
+    .footer-flex {
+        display: flex;
+        justify-content: space-between;
+        max-width: 550px;
+        padding-top: 30px;
+        margin: auto;
+    }
+    .footer-info {
+        left: 0;
+    }
+    .ellipse {
+        left: -40px;
+        top: -20px;
+    }
+    .frontendblock {
+        display: inline;
+        padding-top: 30px;
+    }
+
 }
 
 @media (max-width: 900px) {
@@ -890,17 +1061,28 @@ h5 {
         display: none;
         flex-direction: column;
     }
+    .trainer {
+    /*max-width: 400px*/
+    }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 800px) {
     .section {
         width: 100%;
-        max-width: 340px;
-        max-height: 114px;
+        /*max-width: 680px;*/
+        max-height: 228px;
+        margin: 0 auto;
     }
-    /*.section:hover {*/
-    /*    display: none;*/
-    /*}*/
+    .wrapper {
+        max-width: 750px;
+    }
+    .section {
+        margin: 0 auto;
+    }
+    .div-grid {
+        margin: 0 auto;
+        grid-template-columns: repeat(1, 500px);
+    }
     .h3-grid {
         font-size: 26px;
         line-height: 32px;
@@ -914,6 +1096,12 @@ h5 {
         width: 30px;
         height: 30px;
     }
+    .section-text {
+        font-size: 16px;
+    }
+    .section-description {
+        font-size: 12px;
+    }
     .section-02 {
         grid-column: 1 / 2;
         grid-row:  2 / 3;
@@ -922,6 +1110,7 @@ h5 {
     .section-03 {
         grid-column: 1 / 2;
         grid-row: 3 / 4;
+        height: 228px;
     }
 
     .section-04 {
@@ -938,5 +1127,302 @@ h5 {
         grid-column: 1 / 2;
         grid-row: 6 / 7;
     }
+    .circle {
+        left: 30px;
+        top: -40px;
+    }
+    .footer-nav-item {
+        font-size: 12px;
+    }
+    .trainer {
+        max-width: 375px;
+        height: 216px;
+    }
+    h5 {
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
+    .about-company {
+        margin: 100px 0;
+    }
 }
 
+@media (max-width: 500px) {
+    .online,
+    .workout,
+    .online-span {
+        font-size: 26px;
+    }
+    button,
+    .online-p {
+        font-size: 16px;
+    }
+    .start {
+        width: 100%;
+        max-width: 340px;
+        margin: auto;
+    }
+    .wrapper {
+        width: 100%;
+        max-width: 340px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .online {
+        margin-top: 60px;
+        line-height: 125%
+    }
+    .workout {
+        margin-top: 40px;
+    }
+    .online-p {
+        margin: 16px 0 0 0;
+    }
+    .online-photo {
+        background-image: url("../files/@1x/girl.png");
+        width: 340px;
+        height: 310px;
+        margin-top: 40px;
+    }
+    .button-online {
+        margin: 40px 0 0 0;
+        width: 340px;
+        height: 65px;
+    }
+    .style-h3 {
+        margin-top: 80px;
+    }
+    .events {
+
+    }
+    .events-date {
+        padding-left: 20px;
+        font-size: 12px;
+        line-height: 100%;
+    }
+    .events-p {
+        padding-left: 20px;
+        font-size: 16px;
+        line-height: 120%;
+        max-width: 134px;
+    }
+    .events-type {
+        font-size: 12px;
+        line-height: 150%;
+        left: 0;
+    }
+    .add,
+    .add-01 {
+        display: inline;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    .add-01 {
+        cursor: pointer;
+    }
+    .div-image-01,
+    .div-image-02 {
+        width: 165px;
+        height: 309px;
+        background-size: cover;
+    }
+    .div-image-03 {
+        position: relative;
+        width: 340px;
+        height: 336px;
+        margin-top: 10px;
+        background-image: linear-gradient(180deg, rgba(251, 241, 56, 0.3) 0%, rgba(253, 249, 182, 0) 100%), url("../files/@1x/Event.png");
+        background-size: 100%;
+    }
+    .h3-grid {
+        font-size: 26px;
+        line-height: 32px;
+        margin: 0;
+    }
+    .date-grid {
+        font-size: 16px;
+        line-height: 120%;
+        margin-top: 10px;
+    }
+    .section-date {
+        padding: 20px 20px 0 0;
+        font-size: 16px;
+        line-height: 150%;
+        color: #010101;
+        opacity: 0.7;
+    }
+    .section-text {
+        font-size: 16px;
+        line-height: 120%;
+        left: 77px;
+
+    }
+    .section-image {
+        bottom: 20px;
+        left: 20px;
+    }
+    .image-01 {
+        width: 39px;
+        height: 39px;
+    }
+    .image-02 {
+        width: 34px;
+        height: 53px;
+    }
+    .image-03 {
+        width: 23px;
+        height: 45px;
+    }
+    .image-04 {
+        width: 39px;
+        height: 37px;
+    }
+    .image-05 {
+        width: 46px;
+        height: 25px;
+    }
+    .image-06 {
+        width: 35px;
+        height: 40px;
+    }
+    .section-description {
+        display: none;
+    }
+    .mailing {
+        margin-top: 80px;
+        padding-top: 57px;
+    }
+    .h3-mailing {
+        font-size: 26px;
+        line-height: 32px;
+    }
+    .circle {
+        left: 10px;
+        top: -42px;
+    }
+    .block-input {
+
+        position: static;
+    }
+    .email {
+        width: 302px;
+        position: static;
+    }
+    .subscribe {
+        position: static;
+    }
+    .check {
+
+    }
+    .about-company {
+        display: grid;
+        grid-template-columns: 1fr;
+        /*display: flex;*/
+        /*justify-content: space-between;*/
+        margin: 0 auto;
+    }
+
+    .grid-01 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    .grid-02 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .grid-03 {
+        grid-column: 1 / 2;
+        grid-row: 11 / 12;
+    }
+    .grid-04 {
+        grid-column: 1 / 2;
+        grid-row: 12 / 13;
+    }
+    .grid-05 {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    .grid-06 {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+    .grid-07 {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+    }
+    .grid-08 {
+        grid-column: 1 / 2;
+        grid-row: 6 / 7;
+    }
+    .grid-09 {
+        grid-column: 1 / 2;
+        grid-row: 7 / 8;
+    }
+    .grid-10 {
+        grid-column: 1 / 2;
+        grid-row: 8 / 9;
+    }
+    .grid-11 {
+        grid-column: 1 / 2;
+        grid-row: 9 / 10;
+    }
+    .grid-12 {
+        grid-column: 1 / 2;
+        grid-row: 10 / 11;
+    }
+    h5 {
+        margin: 40px 0 16px 0;
+    }
+    .company-text {
+        max-width: 223px;
+        margin: 0;
+    }
+    .h3-company {
+        font-size: 26px;
+        line-height: 32px;
+    }
+    .about-company-text {
+    }
+    .trainer {
+        max-width: 360px;
+        height: 207px;
+
+    }
+    .button-company {
+        margin: 40px auto;
+        width: 360px;
+        height: 65px;
+    }
+    footer {
+        background-color: inherit;
+        margin-top: 50px;
+    }
+    .footer-nav {
+        padding: 40px 10px 0 10px;
+    }
+    .footer-flex {
+        padding: 25px 10px 0 10px;
+    }
+    .icons {
+        width: 27px;
+        height: 27px;
+    }
+    .footer-email {
+        font-size: 12px;
+        line-height: 150%;
+    }
+    .ellipse {
+        width: 40px;
+        height: 40px;
+        left: -20px;
+        top: 0;
+    }
+    .footer-info {
+        top: 10px;
+    }
+    .frontendblock-div {
+        font-size: 10px;
+        line-height: 150%;
+    }
+}
