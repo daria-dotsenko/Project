@@ -219,15 +219,6 @@ h3 {
 
 /*}*/
 
-.events-about:hover .events-type {display: none;}
-
-.events-about:hover .participate {display: inline;}
-
-.events-about:hover .div-image-01 {background-image: linear-gradient(180deg, rgba(251, 241, 56, 0.6) 0%, rgba(253, 249, 182, 0) 100%), url("../files/@1x/maraphon hover.png");}
-
-.events-about:hover .div-image-02 {background-image: linear-gradient(180deg, rgba(251, 241, 56, 0.6) 0%, rgba(253, 249, 182, 0) 100%), url("../files/@1x/Vebinar 1.png");}
-
-.events-about:hover .div-image-03 {background-image: linear-gradient(180deg, rgba(251, 241, 56, 0.6) 0%, rgba(253, 249, 182, 0) 100%), url("../files/@1x/Vebinar 2.png");}
 
 .div-image-01 {
     position: relative;
@@ -372,7 +363,7 @@ h3 {
 }
 
 .section:hover .section-description {
-    display: inline;
+    display: block;
 }
 
 .section-01 {
@@ -505,32 +496,62 @@ h3 {
     background-color: #F3F3F3;
 }
 
-.subscribe {
-
-}
-
-.check {
-    display: flex;
-}
-
 .check:active .check-box-onclick {display: inline}
 /*todo доработать нажатие кнопки*/
 
-.check-box {
+#check-box {
+    position: absolute;
+    left: 0;
     cursor: pointer;
 }
 
-.check-box-onclick {
+#check-box-onclick {
     display: none;
 }
 
-.per-inf {
+label {
     font-size: 11px;
     line-height: 150%;
     color: #2B3541;
     opacity: 0.5;
-    margin-left: 5px;
 }
+
+.custom-checkbox {
+    width: 18px;
+    height: 18px;
+}
+
+/*.custom-checkbox {*/
+/*    position: absolute;*/
+/*    z-index: -1;*/
+/*    opacity: 0;*/
+/*}*/
+
+/*.custom-checkbox+label {*/
+/*    display: inline-flex;*/
+/*    align-items: center;*/
+/*    user-select: none;*/
+/*}*/
+/*.custom-checkbox+label::before {*/
+/*    content: '';*/
+/*    display: inline-block;*/
+/*    width: 1em;*/
+/*    height: 1em;*/
+/*    flex-shrink: 0;*/
+/*    flex-grow: 0;*/
+/*    border: 1px solid #adb5bd;*/
+/*    border-radius: 0.25em;*/
+/*    margin-right: 0.5em;*/
+/*    background-repeat: no-repeat;*/
+/*    background-position: center center;*/
+/*    background-size: 50% 50%;*/
+/*}*/
+
+/*.custom-checkbox:checked+label::before {*/
+/*    border-color: #0b76ef;*/
+/*    background-color: #0b76ef;*/
+/*    background-image: url("../icons/check box empty.svg");*/
+/*}*/
 
 .a-link:hover {
     color: black;
@@ -746,12 +767,12 @@ h5 {
     color: rgba(43, 53, 65, 1);
 }
 
-.instagram:hover {
+.inst-footer:hover {
     width: 38px;
     height: 38px;
 }
 
-.facebook:hover {
+.fb-footer:hover {
     width: 38px;
     height: 38px;
 }
@@ -850,6 +871,51 @@ h5 {
     letter-spacing: 0.03em;
     text-transform: uppercase;
 }
+
+
+#modal_menu {
+    width: 360px;
+    height: 331px;
+    background-color: #F3F3F3;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 10px;
+    padding-right: 10px;
+    display: none;
+    opacity: 0;
+    z-index: 5;
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+hr {
+    color: rgba(43, 53, 65, 1);
+    height: 1px;
+}
+.menu-item {
+    font-size: 16px;
+    line-height: 150%;
+    color: #2B3541;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.a-menu {
+    text-decoration: none;
+}
+.menu-icons {
+    display: flex;
+    list-style-type: none;
+    position: relative;
+    left: 228px;
+    bottom: 0px;
+}
+
 
 /*.section-gradient:hover {*/
 /*    !*display: none;*!*/
@@ -1160,7 +1226,6 @@ h5 {
     .mailing {
         margin: 100px 0;
         padding: 50px 0;
-        text-align: center;
     }
 
     .div-cirlce {
@@ -1173,17 +1238,38 @@ h5 {
         left: -62px;
     }
 
-    .subscribe {
-        width: 372px;
-        height: 65px;
-    }
-
     .email {
+        width: 302px;
     }
 
     .footer-nav-item {
         font-size: 12px;
     }
+
+}
+
+@media (max-width: 600px) {
+    .subscribe {
+        width: 340px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .email {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 501px) {
+    .events-about:hover .events-type {display: none;}
+
+    .events-about:hover .participate {display: inline;}
+
+    .events-about:hover .div-image-01 {background-image: linear-gradient(180deg, rgba(251, 241, 56, 0.6) 0%, rgba(253, 249, 182, 0) 100%), url("../files/@1x/maraphon hover.png");}
+
+    .events-about:hover .div-image-02 {background-image: linear-gradient(180deg, rgba(251, 241, 56, 0.6) 0%, rgba(253, 249, 182, 0) 100%), url("../files/@1x/Vebinar 1.png");}
+
+    .events-about:hover .div-image-03 {background-image: linear-gradient(180deg, rgba(251, 241, 56, 0.6) 0%, rgba(253, 249, 182, 0) 100%), url("../files/@1x/Vebinar 2.png");}
 
 }
 
@@ -1266,6 +1352,7 @@ h5 {
         background-image: linear-gradient(180deg, rgba(251, 241, 56, 0.3) 0%, rgba(253, 249, 182, 0) 100%), url("../files/@1x/Event.png");
         background-size: 100%;
     }
+
     .h3-grid {
         font-size: 26px;
         line-height: 32px;
@@ -1348,23 +1435,15 @@ h5 {
         left: -31px;
         top: 7px;
     }
-    /*.block-input {*/
-    /*    display: block;*/
-    /*    justify-content: center;*/
-    /*    margin: 0;*/
-    /*}*/
+
     input {
         margin: 0;
     }
     .email {
         width: 302px;
-        position: static;
+        margin: 0 auto;
     }
     .subscribe {
-        position: static;
-    }
-    .check {
-
     }
     .about-company {
         display: grid;
@@ -1472,4 +1551,43 @@ h5 {
         font-size: 10px;
         line-height: 150%;
     }
+
+    .modal_div {
+        width: 360px;
+        height: 505px;
+    }
+
+    .form-heading {
+        font-size: 16px;
+        line-height: 120%;
+    }
+
+    .form-circle {
+        width: 62px;
+        height: 62px;
+        left: 17px;
+        top: 35px;
+    }
+
+    .form-information {
+        font-size: 16px;
+        line-height: 150%;
+        padding: 16px 65px 28px 65px;
+    }
+
+    .form-email {
+        margin: 0 10px;
+        width: 320px;
+    }
+
+    .form-phone {
+        margin: 20px 10px;
+        width: 320px;
+    }
+
+    .form-btn {
+        margin: 20px 10px;
+        max-width: 340px;
+    }
+
 }
