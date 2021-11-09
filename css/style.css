@@ -212,13 +212,7 @@ h3 {
 
 .events-about {
     display: flex;
-    /*position: relative;*/
 }
-
-/*.events-about:after {*/
-
-/*}*/
-
 
 .div-image-01 {
     position: relative;
@@ -257,17 +251,6 @@ h3 {
     padding: 30px 0 20px 30px;
     margin: 0;
 }
-
-/* .events-box {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: 0;
-    width: 126px;
-    height: 47px;
-    background: #FBF138;
-    text-align: center;
-} */
 
 .events-type {
     position: absolute;
@@ -359,8 +342,8 @@ h3 {
 .section:hover {
     border: none;
     background-color: #FEFCFE;
-    /*opacity: 0.5;*/
     box-shadow: 0 4px 30px rgba(43, 53, 65, 0.2);
+    transition: 0.3s;
 }
 
 .section:hover .section-description {
@@ -506,47 +489,16 @@ h3 {
     position: absolute;
     z-index: -1;
     opacity: 0;
-    /*margin: 10px 0 0 20px;*/
+    padding: 0 0 0 30px;
 }
-.checkbox + label {
-    position: relative;
-    padding-left: 25px;
+
+label {
+    color: rgba(43, 53, 65, 0.5);
+}
+
+.a-link {
+    color: rgba(43, 53, 65, 0.5);
     cursor: pointer;
-}
-.checkbox + label:before {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: 0;
-    width: 18px;
-    height: 18px;
-    background: #FFFFFF;
-    transition: .2s;
-}
-.checkbox + label:after {
-    /*content: '';*/
-    /*position: absolute;*/
-    /*width: 18px;*/
-    /*height: 18px;*/
-    /*background: #FFFFFF;*/
-    /*border: 2px solid rgba(43, 53, 65, 1);*/
-    /*transition: .2s;*/
-}
-.checkbox:checked + label:before {
-    /*background: #9FD468;*/
-}
-.checkbox:checked + label:after {
-    /*content: '';*/
-    /*position: absolute;*/
-    /*left: 0;*/
-    /*width: 18px;*/
-    /*height: 18px;*/
-    /*background: #FFFFFF;*/
-    /*border: 2px solid rgba(43, 53, 65, 1);*/
-    /*transition: .2s;*/
-}
-.checkbox:focus + label:before {
-    /*box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 0 0 3px rgba(255,255,0,.7);*/
 }
 
 .a-link:hover {
@@ -554,6 +506,35 @@ h3 {
     opacity: 1;
     cursor: pointer;
 }
+
+.checkbox + label {
+    position: relative;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.checkbox + label:before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: #FFFFFF;
+    border: 2px solid #2B3541;
+    transition: 0.5s;
+    margin-left: -30px;
+    margin-top: -4px;
+}
+
+.checkbox:checked + label:before {
+    content: '';
+    background-image: url("../icons/check_box.svg");
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    transition: 0.5s;
+}
+
+
 
 .h3-company {
     margin: 0;
@@ -759,10 +740,6 @@ h5 {
     opacity: 0.3;
 }
 
-.a-link {
-    color: rgba(43, 53, 65, 1);
-}
-
 .inst-footer:hover {
     width: 38px;
     height: 38px;
@@ -843,7 +820,8 @@ h5 {
     padding: 18px 129px 30px 129px;
 }
 
-.form-email {
+.form-email,
+.form-email:valid {
     margin: 10px 50px;
     padding-left: 19px;
     background: #FFFFFF;
@@ -852,6 +830,10 @@ h5 {
     outline: none;
     width: 475px;
     height: 65px;
+}
+
+.form-email:invalid {
+    border: 2px solid #AE0303;
 }
 
 .form-phone {
@@ -921,16 +903,9 @@ hr {
     bottom: 0px;
 }
 
-
-/*.section-gradient:hover {*/
-/*    !*display: none;*!*/
-/*    position: relative;*/
-/*    border: none;*/
-/*    width: 100%;*/
-/*    background: linear-gradient(360deg, rgba(253, 249, 182, 0.45) 0%, rgba(251, 241, 56, 1) 100%);*/
-/*    opacity: 1;*/
-/*    box-shadow: 0px 13px 30px rgba(186, 180, 69, 0.2);*/
-/*}*/
+input:focus {
+    color: rgba(43, 53, 65, 1);
+}
 
 @media (max-width: 1200px) {
     .about-company-text {
@@ -1046,7 +1021,10 @@ hr {
         top: -10px;
         left: -60px;
     }
-
+    .checkbox + label {
+        font-size: 11px;
+        line-height: 150%;
+    }
     h5 {
         font-size: 16px;
     }
@@ -1178,7 +1156,22 @@ hr {
         line-height: 120%;
         opacity: 0.7;
     }
-    section:hover .section-image {
+    .section-01:hover .section-image {
+        padding-bottom: 50px;
+    }
+    /*.section-02:hover .section-image {*/
+    /*    padding-bottom: 50px;*/
+    /*}*/
+    .section-03:hover .section-image {
+        padding-bottom: 50px;
+    }
+    .section-04:hover .section-image {
+        padding-bottom: 50px;
+    }
+    .section-05:hover .section-image {
+        padding-bottom: 50px;
+    }
+    .section-06:hover .section-image {
         padding-bottom: 50px;
     }
     .section-text {
@@ -1264,12 +1257,26 @@ hr {
     .email {
         margin-right: auto;
         margin-left: auto;
+        margin-bottom: 10px;
+
     }
     .mailing-width {
         margin: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    .checkbox + label {
+        margin-left: -14px;
+    }
+    .checkbox + label:before {
+        margin-left: -30px;
+    }
+    .subscribe {
+        order: 1;
+    }
+    .div-checkbox {
+        margin-bottom: 40px;
     }
 }
 
@@ -1456,7 +1463,6 @@ hr {
     }
     .email {
         width: 302px;
-        margin: 0 auto;
     }
     .subscribe {
     }

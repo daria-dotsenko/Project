@@ -362,7 +362,7 @@
         <div class="mailing-width">
             <input class="email" type="text" placeholder="Ваш e-mail">
             <button class="subscribe"><b>Подписаться</b></button>
-            <div>
+            <div class="div-checkbox">
                 <input type="checkbox" class="checkbox" id="checkbox">
                 <label for="checkbox"> Согласен с обработкой <a class="a-link" href="#">персональных
                     данных</a></label>
@@ -371,7 +371,6 @@
     </div>
     <div class="wrapper">
         <div class="about-company">
-            <!--            <div class="about-company-flex">-->
             <h3 class="h3-company grid-01">О компании</h3>
             <p class="about-company-text grid-02">Наша компания является одной из&nbsp;немногих, кто предлагает
                 фитнес
@@ -431,7 +430,7 @@
             время
         </div>
         <input class="form-email" type="text" placeholder="Ваш e-mail">
-        <input class="form-phone" type="text" placeholder="Ваш номер телефона">
+        <input class="form-phone" type="text" pattern="^[ 0-9]+$" placeholder="Ваш номер телефона">
         <button class="form-btn">Отправить</button>
     </form>
 </div>
@@ -636,6 +635,16 @@
                         .css('display', 'block')
                         .animate({opacity: 1, top: '50%'}, 200);
                 });
+        });
+
+        close.click(function () {
+            modal
+                .animate({opacity: 0, top: '45%'}, 200,
+                    function () {
+                        $(this).css('display', 'none');
+                        overlay.fadeOut(400);
+                    }
+                );
         });
 
         var overlay = $('#overlay');
